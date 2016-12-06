@@ -1,0 +1,53 @@
+html
+  head
+    title Ejemplo CRUD fullstack
+    meta(charset='UTF-8')
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+    script(src='/javascripts/index.js')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .container
+        #custom-bootstrap-menu.navbar.navbar-inverse(role='navigation')
+            .container-fluid
+              .navbar-header
+                a.navbar-brand(href='#' onclick='mainMenu()') GesAcad
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-menubuilder')
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+              .collapse.navbar-collapse.navbar-menubuilder
+                ul.nav.navbar-nav.navbar-left
+                  li
+                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                      | Alumno 
+                      span.caret
+                    ul.dropdown-menu
+                      li
+                        a(href='#') Create
+                      li
+                        a(href='#') Read
+                      li
+                        a(href='#') Update
+                      li
+                        a(href='#') Delete
+                  li
+                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                      | Profesor 
+                      span.caret
+                    ul.dropdown-menu
+                      li
+                        a(href='#' onclick='profesorForm()') Create
+                      li
+                        a(href='#' onclick='profesorRead()') Read
+                      li
+                        a(href='#' onclick='profesorUpdate()' ) Update
+                      li
+                        a(href='#' onclick='profesorDelete()') Delete
+        div(id='main')
+            block content 
+
+        footer(class='well') Copyleft 2º DAM 
+    
