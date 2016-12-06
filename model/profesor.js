@@ -16,7 +16,7 @@ var profesorSchema = new mongoose.Schema({
     "nombre" : String,
     "apellido" : String,
     "email" : String,
-    "id" : Number
+    "id" : id
 });
 
 mongoose.model('Profesor', profesorSchema);
